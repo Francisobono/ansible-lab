@@ -1,0 +1,139 @@
+2024-10-06 20:08:18,797 p=5633 u=ec2-user n=ansible | PLAY [all] *********************************************************************
+2024-10-06 20:08:18,824 p=5633 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 20:08:20,349 p=5633 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 20:08:20,362 p=5633 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 20:08:20,374 p=5633 u=ec2-user n=ansible | TASK [Create a file] ***********************************************************
+2024-10-06 20:08:20,965 p=5633 u=ec2-user n=ansible | changed: [172.31.24.10]
+2024-10-06 20:08:21,020 p=5633 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 20:08:21,028 p=5633 u=ec2-user n=ansible | TASK [check something] *********************************************************
+2024-10-06 20:08:21,569 p=5633 u=ec2-user n=ansible | fatal: [172.31.24.10]: FAILED! => {"changed": false, "cmd": "jakdfhdfd", "msg": "[Errno 2] No such file or directory: b'jakdfhdfd': b'jakdfhdfd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 20:08:21,570 p=5633 u=ec2-user n=ansible | ...ignoring
+2024-10-06 20:08:21,606 p=5633 u=ec2-user n=ansible | fatal: [172.31.24.23]: FAILED! => {"changed": false, "cmd": "jakdfhdfd", "msg": "[Errno 2] No such file or directory: b'jakdfhdfd': b'jakdfhdfd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 20:08:21,607 p=5633 u=ec2-user n=ansible | ...ignoring
+2024-10-06 20:08:21,615 p=5633 u=ec2-user n=ansible | TASK [Create a directory] ******************************************************
+2024-10-06 20:08:22,023 p=5633 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 20:08:22,044 p=5633 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 20:08:22,051 p=5633 u=ec2-user n=ansible | TASK [Create group] ************************************************************
+2024-10-06 20:08:22,605 p=5633 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 20:08:22,661 p=5633 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 20:08:22,668 p=5633 u=ec2-user n=ansible | TASK [Create user Serge] *******************************************************
+2024-10-06 20:08:22,690 p=5633 u=ec2-user n=ansible | skipping: [172.31.24.23]
+2024-10-06 20:08:23,350 p=5633 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 20:08:23,358 p=5633 u=ec2-user n=ansible | TASK [Check uptime] ************************************************************
+2024-10-06 20:08:23,736 p=5633 u=ec2-user n=ansible | changed: [172.31.24.10]
+2024-10-06 20:08:23,775 p=5633 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 20:08:23,782 p=5633 u=ec2-user n=ansible | TASK [Check the date] **********************************************************
+2024-10-06 20:08:24,163 p=5633 u=ec2-user n=ansible | changed: [172.31.24.10]
+2024-10-06 20:08:24,230 p=5633 u=ec2-user n=ansible | fatal: [172.31.24.23]: FAILED! => {"changed": true, "cmd": "cat /etc/passwd | grep serge", "delta": "0:00:00.005025", "end": "2024-10-06 20:08:24.187189", "msg": "non-zero return code", "rc": 1, "start": "2024-10-06 20:08:24.182164", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 20:08:24,231 p=5633 u=ec2-user n=ansible | ...ignoring
+2024-10-06 20:08:24,246 p=5633 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 20:08:24,246 p=5633 u=ec2-user n=ansible | 172.31.24.10               : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2024-10-06 20:08:24,246 p=5633 u=ec2-user n=ansible | 172.31.24.23               : ok=7    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=2   
+2024-10-06 20:45:07,619 p=6195 u=ec2-user n=ansible | PLAY [ws] **********************************************************************
+2024-10-06 20:45:07,629 p=6195 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 20:45:09,403 p=6195 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 20:45:09,435 p=6195 u=ec2-user n=ansible | TASK [Install package] *********************************************************
+2024-10-06 20:45:10,480 p=6195 u=ec2-user n=ansible | fatal: [172.31.24.23]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.yum) module: stage. Supported parameters include: download_dir, update_only, state, list, conf_file, download_only, disable_gpg_check, use_backend, disable_excludes, security, enablerepo, disable_plugin, releasever, autoremove, installroot, name (pkg), update_cache (expire-cache), enable_plugin, install_weak_deps, allow_downgrade, skip_broken, bugfix, sslverify, disablerepo, exclude, cacheonly, validate_certs, lock_timeout, install_repoquery."}
+2024-10-06 20:45:10,481 p=6195 u=ec2-user n=ansible | ...ignoring
+2024-10-06 20:45:10,518 p=6195 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 20:45:10,519 p=6195 u=ec2-user n=ansible | 172.31.24.23               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2024-10-06 20:59:43,202 p=6317 u=ec2-user n=ansible | PLAY [ws] **********************************************************************
+2024-10-06 20:59:43,212 p=6317 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 20:59:44,835 p=6317 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 20:59:44,864 p=6317 u=ec2-user n=ansible | TASK [Debug module] ************************************************************
+2024-10-06 20:59:44,905 p=6317 u=ec2-user n=ansible | ok: [172.31.24.23] => {
+    "msg": "Hello from my playbook"
+}
+2024-10-06 20:59:44,918 p=6317 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 20:59:44,918 p=6317 u=ec2-user n=ansible | 172.31.24.23               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-06 21:03:28,494 p=6397 u=ec2-user n=ansible | PLAY [ws] **********************************************************************
+2024-10-06 21:03:28,512 p=6397 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 21:03:30,319 p=6397 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 21:03:30,333 p=6397 u=ec2-user n=ansible | TASK [Debug module] ************************************************************
+2024-10-06 21:03:30,355 p=6397 u=ec2-user n=ansible | ok: [172.31.24.23] => {
+    "f_name": "John"
+}
+2024-10-06 21:03:30,363 p=6397 u=ec2-user n=ansible | TASK [check server uptime] *****************************************************
+2024-10-06 21:03:30,911 p=6397 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 21:03:30,927 p=6397 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 21:03:30,927 p=6397 u=ec2-user n=ansible | 172.31.24.23               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-06 21:04:58,851 p=6463 u=ec2-user n=ansible | PLAY [ws] **********************************************************************
+2024-10-06 21:04:58,868 p=6463 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 21:05:00,882 p=6463 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 21:05:00,896 p=6463 u=ec2-user n=ansible | TASK [Debug module] ************************************************************
+2024-10-06 21:05:00,917 p=6463 u=ec2-user n=ansible | ok: [172.31.24.23] => {
+    "f_name": "John"
+}
+2024-10-06 21:05:00,928 p=6463 u=ec2-user n=ansible | TASK [check server uptime] *****************************************************
+2024-10-06 21:05:01,841 p=6463 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 21:05:01,862 p=6463 u=ec2-user n=ansible | TASK [Display output variable] *************************************************
+2024-10-06 21:05:01,908 p=6463 u=ec2-user n=ansible | ok: [172.31.24.23] => {
+    "uptime_output": {
+        "changed": true,
+        "cmd": [
+            "uptime"
+        ],
+        "delta": "0:00:00.005034",
+        "end": "2024-10-06 21:05:01.769172",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2024-10-06 21:05:01.764138",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": " 21:05:01 up  6:54,  2 users,  load average: 0.10, 0.02, 0.01",
+        "stdout_lines": [
+            " 21:05:01 up  6:54,  2 users,  load average: 0.10, 0.02, 0.01"
+        ]
+    }
+}
+2024-10-06 21:05:01,935 p=6463 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 21:05:01,936 p=6463 u=ec2-user n=ansible | 172.31.24.23               : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-06 21:08:02,321 p=6594 u=ec2-user n=ansible | PLAY [ws] **********************************************************************
+2024-10-06 21:08:02,350 p=6594 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 21:08:04,237 p=6594 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 21:08:04,251 p=6594 u=ec2-user n=ansible | TASK [Debug module] ************************************************************
+2024-10-06 21:08:04,273 p=6594 u=ec2-user n=ansible | ok: [172.31.24.23] => {
+    "f_name": "John"
+}
+2024-10-06 21:08:04,283 p=6594 u=ec2-user n=ansible | TASK [check server uptime] *****************************************************
+2024-10-06 21:08:05,009 p=6594 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 21:08:05,020 p=6594 u=ec2-user n=ansible | TASK [Display output variable] *************************************************
+2024-10-06 21:08:05,043 p=6594 u=ec2-user n=ansible | ok: [172.31.24.23] => {
+    "uptime_output.stdout_lines": [
+        " 21:08:04 up  6:57,  2 users,  load average: 0.00, 0.01, 0.00"
+    ]
+}
+2024-10-06 21:08:05,061 p=6594 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 21:08:05,061 p=6594 u=ec2-user n=ansible | 172.31.24.23               : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-06 21:31:48,082 p=6787 u=ec2-user n=ansible | PLAY [all] *********************************************************************
+2024-10-06 21:31:48,098 p=6787 u=ec2-user n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-06 21:31:49,734 p=6787 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 21:31:49,886 p=6787 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 21:31:49,897 p=6787 u=ec2-user n=ansible | TASK [Create a file] ***********************************************************
+2024-10-06 21:31:50,461 p=6787 u=ec2-user n=ansible | changed: [172.31.24.10]
+2024-10-06 21:31:50,611 p=6787 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 21:31:50,619 p=6787 u=ec2-user n=ansible | TASK [check something] *********************************************************
+2024-10-06 21:31:51,173 p=6787 u=ec2-user n=ansible | fatal: [172.31.24.10]: FAILED! => {"changed": false, "cmd": "jakdfhdfd", "msg": "[Errno 2] No such file or directory: b'jakdfhdfd': b'jakdfhdfd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 21:31:51,173 p=6787 u=ec2-user n=ansible | ...ignoring
+2024-10-06 21:31:51,254 p=6787 u=ec2-user n=ansible | fatal: [172.31.24.23]: FAILED! => {"changed": false, "cmd": "jakdfhdfd", "msg": "[Errno 2] No such file or directory: b'jakdfhdfd': b'jakdfhdfd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 21:31:51,254 p=6787 u=ec2-user n=ansible | ...ignoring
+2024-10-06 21:31:51,262 p=6787 u=ec2-user n=ansible | TASK [Create a directory] ******************************************************
+2024-10-06 21:31:51,626 p=6787 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 21:31:51,679 p=6787 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 21:31:51,685 p=6787 u=ec2-user n=ansible | TASK [Create group] ************************************************************
+2024-10-06 21:31:52,172 p=6787 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 21:31:52,267 p=6787 u=ec2-user n=ansible | ok: [172.31.24.23]
+2024-10-06 21:31:52,276 p=6787 u=ec2-user n=ansible | TASK [Create user Serge] *******************************************************
+2024-10-06 21:31:52,305 p=6787 u=ec2-user n=ansible | skipping: [172.31.24.23]
+2024-10-06 21:31:52,913 p=6787 u=ec2-user n=ansible | ok: [172.31.24.10]
+2024-10-06 21:31:52,921 p=6787 u=ec2-user n=ansible | TASK [Check uptime] ************************************************************
+2024-10-06 21:31:53,267 p=6787 u=ec2-user n=ansible | changed: [172.31.24.10]
+2024-10-06 21:31:53,375 p=6787 u=ec2-user n=ansible | changed: [172.31.24.23]
+2024-10-06 21:31:53,383 p=6787 u=ec2-user n=ansible | TASK [Check the date] **********************************************************
+2024-10-06 21:31:53,734 p=6787 u=ec2-user n=ansible | changed: [172.31.24.10]
+2024-10-06 21:31:53,767 p=6787 u=ec2-user n=ansible | fatal: [172.31.24.23]: FAILED! => {"changed": true, "cmd": "cat /etc/passwd | grep serge", "delta": "0:00:00.004339", "end": "2024-10-06 21:31:53.730261", "msg": "non-zero return code", "rc": 1, "start": "2024-10-06 21:31:53.725922", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 21:31:53,768 p=6787 u=ec2-user n=ansible | ...ignoring
+2024-10-06 21:31:53,782 p=6787 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
+2024-10-06 21:31:53,782 p=6787 u=ec2-user n=ansible | 172.31.24.10               : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2024-10-06 21:31:53,783 p=6787 u=ec2-user n=ansible | 172.31.24.23               : ok=7    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=2   
